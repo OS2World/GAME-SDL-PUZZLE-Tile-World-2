@@ -1,3 +1,6 @@
+2026 Apr 26: Changes by Dave Yeo
+* Port Makefiles to compile on OS/2. Currently breaks other OS's
+
 2014 Mar 26: version 2.1.0 (by Eric Schmidt, with contributions from
              Madhav Shanbhag)
 * Main window layout changed; in particular, passwords are visible.
