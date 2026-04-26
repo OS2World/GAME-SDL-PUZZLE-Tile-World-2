@@ -19,6 +19,7 @@ endif
 
 QTMODULES := Core Gui Xml
 QTMODULES := $(addprefix -lQt,$(QTMODULES))
+QTMODULES := $(addsuffix 4,$(QTMODULES))
 ifeq ($(OSTYPE),windows)
 	QTMODULES := $(addsuffix 4,$(QTMODULES))
 endif

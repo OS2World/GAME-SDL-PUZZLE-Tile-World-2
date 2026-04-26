@@ -3,9 +3,9 @@
 #
 
 ifneq ($(OSTYPE),windows)
-	bindir = /usr/local/games
-	sharedir = /usr/local/share/tworld
-	mandir = /usr/local/man
+	bindir = /@unixroot/usr/local/bin
+	sharedir = /@unixroot/usr/local/share/tworld
+	mandir = /@unixroot/usr/local/man
 endif
 
 
@@ -19,9 +19,11 @@ ifeq ($(OSTYPE),windows)
 	CC   = gcc
 	CXX  = g++
 else
-	EXE  =
+	EXE  = .exe
 	RM_F = rm -f
 	CP   = cp
+	CC   = gcc
+	CXX  = g++
 endif
 
 LINK = $(CXX)
@@ -37,6 +39,7 @@ endif
 
 CFLAGS += $(COMMONFLAGS)
 CXXFLAGS += $(COMMONFLAGS)
+LDFLAGS += -Zomf -Zhigh-mem -Zmap
 
 %.o: %.c
 	@echo Compiling $<...
