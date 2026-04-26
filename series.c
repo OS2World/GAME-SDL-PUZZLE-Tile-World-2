@@ -537,7 +537,7 @@ static int getseriesfile(char *filename, void *data)
 static int gameseriescmp(void const *a, void const *b)
 {
     return
-#ifdef WIN32
+#if defined (WIN32) || (__OS2__)
         stricmp
 #else
         strcasecmp
