@@ -3,9 +3,9 @@
 #
 
 ifneq ($(OSTYPE),windows)
-	bindir = /@unixroot/usr/local/bin
-	sharedir = /@unixroot/usr/local/share/tworld
-	mandir = /@unixroot/usr/local/man
+#	bindir = /@unixroot/usr/local/bin
+#	sharedir = /@unixroot/usr/local/share/tworld
+#	mandir = /@unixroot/usr/local/man
 endif
 
 
